@@ -1,0 +1,39 @@
+{
+  "name": "@auth-kit/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio"
+  },
+  "packageManager": "pnpm@10.7.1",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "@trpc/server": "^11.7.1",
+    "bcryptjs": "^3.0.2",
+    "drizzle-orm": "^0.44.7",
+    "haikunator": "^2.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "nanoid": "^5.1.6",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.9.1",
+    "dotenv": "^17.2.3",
+    "drizzle-kit": "^0.31.6",
+    "typescript": "^5.9.3"
+  }
+}
